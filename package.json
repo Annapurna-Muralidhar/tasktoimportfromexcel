@@ -1,0 +1,45 @@
+{
+  "name": "task1",
+  "version": "1.0.0",
+  "description": "A simple CAP project.",
+  "repository": "<Add your repository here>",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@sap/cds": "^7",
+    "express": "^4",
+    "generator-ui5-excelupload": "^0.2.5",
+    "generator-ui5-spreadsheetimporter": "^0.6.0",
+    "ui5-cc-excelupload": "^0.20.0",
+    "ui5-cc-spreadsheetimporter": "^1.1.1"
+  },
+  "devDependencies": {
+    "@cap-js/sqlite": "^1",
+    "@sap/ux-specification": "^1.120.15"
+  },
+  "scripts": {
+    "start": "cds-serve",
+    "watch-product": "cds watch --open product/webapp/index.html?sap-ui-xx-viewCache=false",
+    "watch-project1": "cds watch --open project1/webapp/index.html?sap-ui-xx-viewCache=false"
+  },
+  "cds": {
+    "fiori": {
+      "lean_draft": true,
+      "bypass_draft": true
+    },
+    "requires": {
+      "db": {
+        "kind": "sqlite",
+        "credentials": {
+          "url": "db.sqlite"
+        }
+      }
+    }
+  },
+  "sapux": [
+    "app/product",
+    "app/project1",
+    "app/project1"
+  ]
+  
+}
